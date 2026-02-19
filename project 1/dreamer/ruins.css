@@ -1,0 +1,214 @@
+body {
+    font-family: "pf-videotext", sans-serif;
+    background-image: url(circular-ruins1-900x667.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.all-revealed {
+    cursor: default;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+p {
+    font-size: 14px;
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+a {
+    font-size: 14px;
+    font-family: "pf-videotext", sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Bullwinkle + dream morgan side by side */
+.dream-scene {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+}
+
+.book-image {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book-image:hover {
+    transform: scale(1.05);
+}
+
+.dream-morgan {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    display: block;
+    position: relative;
+    bottom: 20px;
+}
+
+.character-reveal {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Book text box */
+.book-text-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-text-box.active {
+    display: flex;
+}
+
+.book-text-content {
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white;
+    padding: 40px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-family: "pf-videotext", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.book-text-content h1 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: none;
+}
+
+.book-text-content p {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+/* Character reveal */
+.character-reveal {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 50;
+}
+
+.character-reveal img {
+    max-width: 36em;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.dream-scene {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+}
+
+.bullwinkle-bg {
+    width: 280px;
+    height: auto;
+}
+
+.dream-link {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.dream-link img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.dream-link:hover img {
+    opacity: 0.8;
+}

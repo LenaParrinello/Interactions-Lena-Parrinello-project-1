@@ -1,0 +1,119 @@
+h1{
+font-size: 60px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(32, 48, 59);
+}
+
+h2{
+font-size: 32px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(32, 48, 59);
+}
+
+h3{
+font-size: 20px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: white;
+}
+
+p{
+font-size: 14px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(32, 48, 59);
+}
+
+.container{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+a{
+font-size: 14px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: rgb(32, 48, 59);
+text-decoration: none;
+display: block;
+text-align: center;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+body {
+cursor: default;
+position: relative;
+background-image: url(cloudsTreated.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+min-height: 100vh;
+}
+
+body:not(.all-revealed) {
+cursor: pointer;
+}
+
+body::after {
+content: 'Click to continue...';
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: rgba(255, 255, 255, 0.5);
+font-family: "pf-videotext", sans-serif;
+font-size: 12px;
+pointer-events: none;
+animation: pulse 2s ease-in-out infinite;
+}
+
+body.all-revealed::after {
+display: none;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 0.7; }
+}
+
+img{
+height: 20em;
+width: 20em;
+align-items: center;
+display: block;
+margin: 0 auto;
+}
+
+.door-link {
+display: block;
+text-align: center;
+cursor: pointer;
+pointer-events: auto;
+}
+
+.door-link:hover {
+text-decoration: none;
+}
+
+.linkbox{
+padding: 30px;
+text-align: center;
+}
