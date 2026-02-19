@@ -1,0 +1,192 @@
+h1{
+font-size: 60px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(0, 0, 0);
+}
+
+h2{
+font-size: 32px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(0, 0, 0);
+}
+
+h3{
+font-size: 20px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(0, 0, 0);
+}
+
+p{
+font-size: 14px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-align: center;
+color: rgb(0, 0, 0);
+}
+
+.container{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+a{
+font-size: 14px;
+font-family: "pf-videotext", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: rgb(0, 0, 0);
+text-decoration: none;
+display: block;
+text-align: center;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+body {
+background-image: url(AdobeStock_137959206.jpeg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+min-height: 100vh;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+img{
+max-width: 20em;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+.door-link {
+display: block;
+text-align: center;
+cursor: pointer;
+pointer-events: auto;
+}
+
+.door-link:hover {
+text-decoration: none;
+}
+
+.linkbox{
+padding: 30px;
+text-align: center;
+}
+
+.character-reveal {
+position: fixed;
+bottom: 0;
+left: -300px;
+display: none;
+flex-direction: row;
+align-items: flex-end;
+gap: 20px;
+padding: 20px;
+z-index: 100;
+transition: left 0.6s ease-out;
+}
+
+.character-reveal.slide-in {
+left: 0;
+}
+
+.character-reveal img {
+max-width: 12em;
+height: auto;
+display: block;
+}
+
+.character-reveal .peek-text {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 10px;
+}
+
+.character-reveal h1 {
+font-size: 28px;
+text-align: left;
+margin: 0 0 10px 0;
+}
+
+.character-reveal p {
+text-align: left;
+margin: 0 0 8px 0;
+}
+
+.character-reveal a {
+cursor: pointer;
+text-align: left;
+}
+
+.choose {
+font-size: 18px;
+font-style: italic;
+margin-bottom: 20px;
+}
+
+/* Click hint */
+.click-hint {
+position: fixed;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 12px;
+color: rgba(0, 0, 0, 0.5);
+pointer-events: none;
+animation: pulse 2s ease-in-out infinite;
+transition: opacity 0.5s;
+z-index: 999;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 0.7; }
+}
+
+/* Yu Tsun side panel */
+.character-reveal {
+position: fixed;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+padding: 20px;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.5s;
+z-index: 100;
+}
+
+.character-reveal.visible {
+opacity: 1;
+pointer-events: auto;
+}
+
+.character-reveal h1 {
+font-size: 24px;
+}
+
+.character-reveal img {
+max-width: 10em;
+height: auto;
+}
